@@ -1,9 +1,9 @@
 # Mean-app
-### This is the code for sample app that we developed for the chennai-angularjs meetup
+### This is the code for the sample app we developed during chennai-angularjs meetup
 code base for the session held on 23/07/2017 - mean app development by dinesh kumar subramanian
 
 
- ## Instructions to use the code base
+ ## Instructions to run the code locally
 
 1.Clone the repository.
 ```sh
@@ -22,7 +22,7 @@ git clone https://github.com/dteam-chennai/Mean-app.git
  $ npm install
 ```
 
-5.After installing the dependencies, serve the app by the following command,
+5.After installing the dependencies, run the app by issuing the following command,
 ```sh
 $ ng serve
 ``` 
@@ -32,6 +32,6 @@ $ ng serve
 127.0.0.1:4200
 ```
 
-### click [here](https://github.com/dteam-chennai/documents) to download the documents for the meetup.
+### click [here](https://github.com/dteam-chennai/documents) to download the presentations and documents.
 
-Please follow us on  [facebook](https://www.facebook.com/dteamch) for further Meetups and Info. 
+Please follow us on  [facebook](https://www.facebook.com/dteamch) and [Meetup](https://www.meetup.com/Angular-JS-Chennai-Meetup/) for further Meetups and Info. 
