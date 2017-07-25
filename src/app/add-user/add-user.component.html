@@ -1,0 +1,13 @@
+<div class="formContainer">
+    <form (submit)="createUser()">
+        Name:
+        <input type="text" [(ngModel)]="user.name" name="name">
+        <br> Status:
+        <input type="text" [(ngModel)]="user.status" name="status">
+        <br>
+        <button *ngIf="newuser" type="submit">ADD</button>
+        <button *ngIf="!newuser" type="submit">UPDATE</button>
+        <a href="/">Cancle</a>
+    </form>
+
+</div>

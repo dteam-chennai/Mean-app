@@ -1,0 +1,20 @@
+<div class="tableContainer" *ngIf="users">
+    <a routerLink="/adduser">Add User</a>
+    <br>
+    <h2>User List</h2>
+    <table>
+        <thead>
+            <!--<th *ngFor="let key of users.keys">key</th> -->
+            <th>Name</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td><a [routerLink]="['/user/', user.id]"> {{user.name}}</a>
+                    <!--<app-add-user [user]="user"></app-add-user>-->
+                </td>
+                <td>{{user.status}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
