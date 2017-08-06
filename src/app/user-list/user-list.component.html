@@ -10,7 +10,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let user of users">
-                <td><a [routerLink]="['/user/', user.id]"> {{user.name}}</a>
+                <td><a [routerLink]="['/user/', user._id]"> {{user.name}}</a>
                     <!--<app-add-user [user]="user"></app-add-user>-->
                 </td>
                 <td>{{user.status}}</td>

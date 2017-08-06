@@ -1,5 +1,5 @@
 <div class="formContainer">
-    <form (submit)="createUser()">
+    <form (submit)="newuser? createUser(): updateUser()">
         Name:
         <input type="text" [(ngModel)]="user.name" name="name">
         <br> Status:
@@ -7,7 +7,7 @@
         <br>
         <button *ngIf="newuser" type="submit">ADD</button>
         <button *ngIf="!newuser" type="submit">UPDATE</button>
-        <a href="/">Cancle</a>
+        <a href="/">Cancel</a>
     </form>
 
 </div>

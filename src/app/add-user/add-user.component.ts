@@ -27,7 +27,15 @@ export class AddUserComponent implements OnInit {
     if(this.id) {
       console.log(this.id);
       this.newuser = false;
-      this.user = this.userservice.getUserById(this.id)[0];
+      this.userservice.getUserById(this.id).subscribe(
+        user => {
+          this.user = user;
+        },
+        error => {
+          console.log(error);
+        }
+
+      )
     }
 
 
@@ -39,9 +47,30 @@ export class AddUserComponent implements OnInit {
     } else {
       this.uservice.createUser(this.user);
     }*/
-    console.log("inside create user", this.user);
-    this.userservice.createUser(this.user);
-    this.router.navigate(['/users']);
+    console.log('inside create user', this.user);
+    this.userservice.createUser(this.user).subscribe(
+      data => {
+        console.log('user created successfully');
+        this.router.navigate(['/users']);
+      },
+      error => {
+        console.log(error);
+      }
+    )
+
   }
+
+  updateUser() {
+    this.userservice.updateUser(this.id, this.user).subscribe(
+      data => {
+        console.log('updated successfully');
+        this.router.navigate(['/users']);
+      },
+      error => {
+        console.log(error);
+      }
+    );
+
+    }
 
 }

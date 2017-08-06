@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../user.service';
 import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-user-list',
@@ -12,7 +13,17 @@ export class UserListComponent implements OnInit {
   constructor(private userservice: UserService) { }
 
   ngOnInit() {
-    this.users = this.userservice.getAllUser();
+    // console.log('inside user list Component');
+    this.userservice.getAllUser().subscribe(
+      users => {
+        this.users = users;
+        console.log(users);
+      },
+      error => {
+        console.log(error);
+      }
+
+    )
   }
 
 }
